@@ -1,0 +1,149 @@
+PARADISE LOST (light, 2017) - KIT DE TRADUCCION AL ESPANOL
+=========================================================
+
+Este kit NO trae el juego ni su texto japones. Funciona con TU copia del juego:
+saca el guion de tu data1.dat, le pone el espanol y arma un data3.dat que el juego
+carga encima del original. Tu data1.dat nunca se modifica.
+
+Requisitos
+- Paradise Lost de light, edicion 2017 (malie.exe 1.1.0.0). Sin parches oficiales.
+  ¿OTRA VERSION DEL JUEGO? La herramienta lo detecta y se detiene. Te podemos ayudar a
+  adaptarla: escribe en el Discord https://discord.gg/NV8TbQQ7B con de donde es tu copia,
+  la version de malie.exe (clic derecho > Propiedades > Detalles) y una captura del mensaje
+  (trae un codigo md5). No compartas archivos del juego ni tu codigo de producto.
+- Python 3 (python.org; al instalar marca "Add Python to PATH").
+- Opcional: "pip install numpy" (hace todo unas 40 veces mas rapido).
+- Opcional, solo para el paso 5: "pip install pefile".
+
+LO MAS FACIL: LA HERRAMIENTA CON VENTANAS
+  Doble clic en ABRIR_HERRAMIENTA.bat (en Linux/Steam Deck: abrir_herramienta.sh).
+  Pestaña 1 "Inicio": elige la carpeta del juego y usa los botones en orden:
+    - Extraer el guion del juego (crea el CSV maestro con la traduccion del kit)
+    - Usar mi propio CSV... (cualquier nombre; se revisa, se corrige y queda como maestro)
+    - Revisar y corregir el CSV maestro
+    - Generar e instalar la traduccion (data3.dat)
+    - Crear malie_es.exe (menus de la ventana en espanol)
+    - Quitar la traduccion / Abrir el juego / Abrir reporte / Discord
+  Pestaña 2 "Editar mensajes": busca por id o texto, filtra (sin traducir, con error,
+    con avisos), edita el espanol viendo el japones, revision en vivo (renglones, marcas,
+    estilo), correccion automatica y "Guardar CSV maestro".
+  Pestaña 3 "Nombres y opciones": edita la caja de nombre y las opciones de eleccion.
+  Los .bat de abajo hacen lo mismo sin ventanas.
+
+QUE SE REVISA: marcas {v:}{/v} y {end} (iguales al japones), tamano (68 caracteres x 5
+  renglones, maximo 900 por mensaje), japones sin traducir y estilo. Tabla completa en
+  README.md, seccion "Que revisa la herramienta", y en el boton "¿Que se revisa?".
+
+Contacto y dudas: Discord https://discord.gg/NV8TbQQ7B
+
+FORMA RAPIDA (si ya tienes tu CSV traducido)
+  Abre 3_GENERAR_DAT, arrastra tu CSV a la ventana y presiona Enter. La primera vez te
+  pide la carpeta del juego. Revisa, corrige, guarda el CSV maestro y arma el data3.dat.
+  Tu CSV necesita las columnas id y spanish. Si NO trae la columna japanese, primero
+  corre 1_EXTRAER (el kit saca el japones de tu juego).
+
+Por que el kit necesita tu juego: el data3.dat no lleva solo los textos, lleva el
+programa completo de las escenas (exec.dat: orden de escenas, voces, musica, opciones)
+con el texto adentro. Ese programa sale de TU data1.dat; el kit no lo trae porque es
+parte del juego.
+
+PASOS (doble clic en cada .bat)
+1_EXTRAER.bat    Te pide la carpeta del juego (donde estan malie.exe y data1.dat).
+                 Crea en trabajo\:
+                   CSV_MAESTRO.csv      guion completo: id, voice, japanese, spanish, status
+                                        (ya trae la traduccion del kit en la columna spanish)
+                   CADENAS_MAESTRO.tsv  nombres de la caja de nombre y opciones de eleccion
+                   exec_original.dat    guion original de tu juego (no se toca)
+                 Si ya existe CSV_MAESTRO.csv NO lo sobrescribe (tu trabajo esta a salvo).
+                 Para rehacerlo desde cero, en CMD:  1_EXTRAER.bat "" --forzar
+                 (se guarda respaldo en trabajo\respaldos).
+
+2_REVISAR_Y_CORREGIR.bat
+                 Arrastra encima CUALQUIER CSV (con el nombre que quieras), o abrelo y
+                 arrastra el archivo a la ventana. Si solo das Enter, revisa el maestro.
+                 El archivo necesita columnas "id" y "spanish" (las demas son opcionales);
+                 puede tener todo el guion o solo una parte. Acepta CSV con coma, con punto
+                 y coma (Excel en espanol) o TSV, en UTF-8 o ANSI.
+                 Que hace:
+                   a) revisa cada mensaje con los parametros del juego;
+                   b) CORRIGE solo lo que se puede arreglar sin cambiar el sentido:
+                      - marcas de voz {v:..}{/v} y {end} faltantes, repetidas o mal puestas
+                      - marcas escritas con espacios o mayusculas ({END}, { n })
+                      - saltos de linea y tabuladores reales -> {n} / espacio
+                      - furigana {r:base|lectura} -> se deja la base
+                      - puntuacion japonesa (、。！？～・) y letras de ancho completo -> latinas
+                      - «...» -> «…»; espacios dobles o antes de signos; espacios junto a {n}
+                      - nombres mal escritos de la lista (Sophie->Sofi, Altmarine->Altomarine...)
+                      - si no cabe en 5 renglones, prueba quitar los {n} manuales
+                   c) guarda el resultado en trabajo\CSV_MAESTRO.csv (respaldo del anterior
+                      en trabajo\respaldos). Ese es tu CSV FINAL.
+                 Al final dice LISTO y escribe trabajo\reporte_revision.txt con:
+                   cuantos mensajes se revisaron, que errores habia, cuales se corrigieron
+                   (y como), cuales NO se pudieron corregir y los avisos de estilo.
+                 Lo que NO se puede corregir solo (texto demasiado largo, japones sin
+                 traducir) queda marcado con status "error" y se vera en japones hasta que
+                 lo arregles a mano y vuelvas a correr este paso.
+
+3_GENERAR_DAT.bat
+                 Toma trabajo\CSV_MAESTRO.csv y arma el data3.dat con el guion, los nombres
+                 y opciones y la interfaz en espanol; lo comprueba releyendolo y lo copia a
+                 la carpeta del juego (si ya habia un data3.dat, lo respalda antes).
+                 Si arrastras un CSV encima, primero lo revisa y corrige (paso 2) y despues
+                 genera el .dat. Los mensajes con error o sin traducir quedan en japones.
+
+4_MENUS_EXE_ES.bat (opcional) Crea malie_es.exe con los menus de la ventana y los avisos
+                 (Guardar, Cerrar, etc.) en espanol. malie.exe queda intacto.
+                 Necesita: pip install pefile
+
+Volver al japones: quita o renombra data3.dat de la carpeta del juego.
+
+TU PROPIA TRADUCCION
+Traduce en tu propio CSV (columnas id y spanish, con el nombre que quieras) o directo en
+trabajo\CSV_MAESTRO.csv. Luego 2_REVISAR_Y_CORREGIR y 3_GENERAR_DAT.
+Una fila con spanish vacio se queda en japones.
+Los nombres y opciones se editan en trabajo\CADENAS_MAESTRO.tsv (columna spanish).
+
+PARAMETROS MEDIDOS EN EL JUEGO (los usa el validador)
+- 68 caracteres latinos por renglon; 5 renglones visibles (con la ventana de texto
+  modificada que trae el kit en interfaz\). El kit pone los saltos de renglon solo,
+  entre palabras; tras 「 『 o （ el juego sangra los renglones siguientes 2 espacios.
+- Maximo 900 caracteres por mensaje contando las marcas.
+- 1 {end} por mensaje (igual que el japones).
+
+REGLAS DE FORMATO (columna spanish)
+- Copiar exacto {v:v_xx0000} al inicio y {/v} al final cuando el japones los trae.
+- Misma cantidad de {end} que el japones.
+- {n} = salto de renglon manual; usarlo solo para separar ideas. Sin espacio antes ni despues.
+- {r:base|lectura} (furigana) no se usa en espanol: se traduce el sentido.
+- Dialogos entre 「 」 como en el japones; 『 』 se conserva cuando el japones lo usa.
+- Ningun caracter japones: ni kana/kanji, ni 、。・～ っ, ni letras de ancho completo.
+  (Excepcion: «？？» de nombre oculto en CADENAS_MAESTRO.)
+- «…» en lugar de tres puntos; ―― (raya doble) como en el original.
+- ¿? y ¡! siempre en pareja.
+- Sin tabuladores ni saltos de linea reales dentro del texto.
+
+ESTILO (avisos; lista editable en traduccion\reglas_estilo.tsv;
+        la columna "reemplazo" hace que se corrija solo)
+- Espanol latinoamericano neutro: ustedes (nunca vosotros), sin modismos de Espana.
+- Sin honorificos japoneses (-sama, -san...): usar senor/senora o nada.
+- Nombres segun VNDB: Ryle, Lil (Lilliel), Ast (Astaroth), Know Christ, Sofia/Sofi,
+  Lilith Altomarine, Neros Satanail, Ennis Cardinal, Carmine Onyx, Judas Strife,
+  Vera Cross. Angeles en forma inglesa: Michael, Raphael, Uriel, Gabriel.
+- Ast habla de usted a todos.
+- Escenas para adultos: traduccion fiel, sin anadir ni quitar.
+
+STEAM DECK / LINUX (Konsole), desde la carpeta del kit:
+  python3 herramientas/pl_kit.py extraer "/ruta/al/juego"
+  python3 herramientas/pl_kit.py revisar mi_archivo.csv     (revisa, corrige y guarda en el maestro)
+  python3 herramientas/pl_kit.py validar mi_archivo.csv     (solo revisa, no cambia nada)
+  python3 herramientas/pl_kit.py generar
+
+NO COMPARTAS la carpeta trabajo\ ni el data3.dat: llevan el guion del juego.
+Para compartir una traduccion, comparte solo traduccion\traduccion_es.tsv (id + spanish).
+
+Carpetas
+  herramientas\  scripts (pl_kit.py es el principal; los demas son modulos)
+  traduccion\    traduccion_es.tsv (id, spanish), cadenas_es.tsv, reglas_estilo.tsv
+  interfaz\      solo los archivos de interfaz traducidos + lista_interfaz.txt
+                 (los demas archivos de esas carpetas se toman de tu data1.dat)
+  trabajo\       se crea al usar el kit: CSV maestro, reportes, respaldos, data3.dat

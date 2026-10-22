@@ -1,0 +1,104 @@
+PARADISE LOST (light) EN ESPANOL - INSTALAR EN STEAM DECK
+=========================================================
+Copia personal del juego con la traduccion (data3.dat) y menus en espanol (malie_es.exe).
+No la compartas: lleva el juego.
+(Estos pasos todavia no se han probado en un Steam Deck; si algo sale distinto, avisa.)
+
+---------------------------------------------------------
+PARTE 1. PASAR LA CARPETA
+---------------------------------------------------------
+1. Copia la carpeta "PARADISE LOST" a una memoria USB o microSD.
+2. En el Deck: boton de encendido (mantener) -> "Cambiar a escritorio".
+3. Conecta la memoria y abre Dolphin (icono de carpeta en la barra de abajo).
+4. Entra a Home (/home/deck). Clic derecho -> Crear nuevo -> Carpeta -> nombre: Games
+5. Copia "PARADISE LOST" dentro de Games. Debe quedar:
+     /home/deck/Games/PARADISE LOST/malie_es.exe
+     /home/deck/Games/PARADISE LOST/data3.dat   (y lo demas)
+
+---------------------------------------------------------
+PARTE 2. AGREGARLO A STEAM (en el escritorio)
+---------------------------------------------------------
+1. Abre Steam.
+2. Abajo a la izquierda: "Agregar un juego" -> "Agregar un juego que no es de Steam".
+3. "Examinar" -> /home/deck/Games/PARADISE LOST
+4. Abajo cambia el tipo de archivo a "Todos los archivos", elige malie_es.exe -> Abrir.
+5. "Agregar programas seleccionados".
+6. En la biblioteca, clic derecho en malie_es.exe -> Propiedades:
+   - Accesos directos -> nombre: Paradise Lost (ES)
+   - Compatibilidad -> marca "Forzar el uso de una herramienta especifica de
+     compatibilidad de Steam Play" -> Proton Experimental
+7. Doble clic en "Volver a Modo de juego" en el escritorio.
+
+ACTIVACION: la primera vez actívalo con TU codigo. Se guarda en la configuracion
+de Proton de ese acceso directo. Para no tener que volver a hacerlo: no borres ni
+vuelvas a crear el acceso directo, no cambies de Proton si ya funciona y no muevas
+la carpeta.
+
+---------------------------------------------------------
+PARTE 3. CONTROLES (se hace una vez, en Modo de juego)
+---------------------------------------------------------
+El juego no reconoce el control: se maneja con teclado y raton. Steam convierte los
+botones del Deck en teclas. Pasos:
+
+1. Abre la ficha de "Paradise Lost (ES)" en la biblioteca (no lo inicies todavia).
+2. Pulsa el icono del control (a la derecha del boton Jugar) -> "Diseno del control"
+   -> "Explorar disenos" -> "Plantillas" -> elige "Teclado (WASD) y raton".
+   -> "Aplicar diseno".
+3. Vuelve a "Diseno del control" -> "Editar diseno" y asigna cada boton como en la
+   tabla (en cada boton: elegir -> pestaña "Teclado" -> la tecla; para el raton,
+   pestaña "Raton").
+
+   BOTON DEL DECK        TECLA / ACCION             QUE HACE EN EL JUEGO
+   --------------------  -------------------------  ---------------------------------
+   A                     Enter                      avanzar texto / confirmar
+   B                     Esc                        menu / cancelar
+   X                     Backspace                  ocultar la ventana de texto
+                         (si no funciona: tecla X;   (el modo automatico, tecla A, se
+                          o tecla 0)                 puede poner en otro boton si lo usas)
+   Y                     B                          historial (backlog)
+   L1 (bumper izq.)      Re Pag (Page Up)           historial: mas antiguo
+   R1 (bumper der.)      Av Pag (Page Down)         avanzar / historial: mas reciente
+   L2 (gatillo izq.)     LCtrl (Presion completa)   saltar texto ya leido mientras
+                                                    lo mantienes (activacion normal,
+                                                    no "Alternar")
+   R2 (gatillo der.)     Clic izquierdo del raton   clic
+   Cruceta arriba        Flecha arriba              mover seleccion
+   Cruceta abajo         Flecha abajo               mover seleccion
+   Cruceta izquierda     F10                        cargar guardado rapido
+   Cruceta derecha       F9                         guardado rapido
+   Menu (☰, derecha)     C                          configuracion
+   Vista (⧉, izquierda)  F12                        lista de atajos
+   L4 (atras, izq. arr.) S                          pantalla de guardar
+   L5 (atras, izq. ab.)  L                          pantalla de cargar
+   R4 (atras, der. arr.) V                          repetir la voz
+   R5 (atras, der. ab.)  T                          volver al titulo
+   Panel tactil derecho  Como raton (ya viene)      mover el cursor; presionar = clic
+   Panel tactil izq.     Comportamiento: Rueda de   giro contrarreloj = Rueda arriba
+                         desplazamiento             (historial); giro horario = Rueda
+                                                    abajo (avanzar)
+   Joystick derecho      Raton de joystick          mover el cursor
+   Joystick izquierdo    Flechas (teclas)           mover seleccion
+
+4. Arriba, "Guardar" o "Exportar diseno" -> "Guardar como nuevo diseno personal",
+   nombre: Paradise Lost ES. (Asi no se pierde y lo puedes volver a elegir.)
+5. Inicia el juego y prueba: A avanza, B abre el menu, L2 mantenido salta.
+
+Atajos de teclado del juego (los que usa la tabla): Espacio/Enter avanzar,
+Esc cancelar, Ctrl saltar lo leido, Shift+Ctrl saltar todo, V voz, S guardar, L cargar,
+C configuracion, B historial, A automatico, T titulo, F9 guardado rapido,
+F10 carga rapida, F12 lista de atajos.
+
+---------------------------------------------------------
+SI ALGO FALLA
+---------------------------------------------------------
+- Cuadros o letras raras: Propiedades -> General -> Opciones de lanzamiento:
+      LANG=ja_JP.UTF-8 %command%
+- No abre: agrega malie.exe en vez de malie_es.exe (el texto sigue en espanol;
+  solo los menus de la ventana quedan en japones).
+- Pantalla negra: Compatibilidad -> prueba otra version (Proton 9).
+- Los botones no hacen nada: icono del control -> confirma que "Steam Input" este
+  activado para este juego.
+- Pantalla muy chica: dentro del juego Alt+Enter (o en la tabla agrega un boton con
+  Alt+Enter) para pantalla completa.
+
+Volver al japones: renombra data3.dat (por ejemplo a data3.dat.bak).

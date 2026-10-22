@@ -1,0 +1,16 @@
+patron	problema	nivel	mayusculas	reemplazo
+\.\.\.	tres puntos: usar el caracter «…»	AVISO		…
+…{4,}	demasiados «…» seguidos (en español basta con … o ……)	AVISO		
+-(sama|san|kun|chan|dono|senpai|sensei)\b	honorifico japones (usar señor, señora o nada)	AVISO		
+\b(vosotros|vosotras|vuestro|vuestra|vuestros|vuestras|os|habéis|sois|tenéis|podéis|queréis|sabéis|estáis|vais|hacéis|decís|venid|id)\b	forma de España (usar ustedes)	AVISO		
+\b(gilipollas|chaval|chavala|ordenador|vale\?|tío,|tía,|mola|molar|hostia|cabrón de)\b	palabra de España (español neutro latino)	AVISO		
+\bSophia\b	nombre: Sofia	AVISO	si	Sofia
+\bAltmarine\b	nombre: Altomarine	AVISO	si	Altomarine
+\bLiliel\b	nombre: Lilliel	AVISO	si	Lilliel
+\bAstarot\b	nombre: Astaroth	AVISO	si	Astaroth
+\b(Belzebu|Beelzebul|Belcebu)\b	nombre: Beelzebub (o Belcebú cuando es el tornado)	AVISO	si	
+\b(Satanael|Satanaël)\b	nombre: Satanail	AVISO	si	Satanail
+\b(Rail|Rairu)\b	nombre: Ryle	AVISO	si	
+\bNo\b(?=[ ,]Christ)	revisar: Know (no «No») Christ	AVISO	si	
+[ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａ-ｚ０-９]	letras o numeros de ancho completo	AVISO		
+\bSophie\b	nombre: Sofi	AVISO	si	Sofi

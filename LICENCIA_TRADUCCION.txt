@@ -1,0 +1,17 @@
+LICENCIA DE LA TRADUCCION
+=========================
+La traduccion al espanol (carpeta traduccion/) y las imagenes de interfaz traducidas
+(carpeta interfaz/) se comparten bajo la licencia Creative Commons
+Atribucion-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0):
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es
+
+En pocas palabras: puedes usarla, corregirla y compartirla, siempre que
+  - menciones este proyecto,
+  - no la vendas ni la uses con fines comerciales, y
+  - compartas tus cambios con esta misma licencia.
+
+Paradise Lost, su historia, su texto original, su arte y sus marcas pertenecen a light
+y a sus titulares. Este proyecto es de fans, sin fines de lucro y con fines de
+preservacion; no incluye el juego ni su texto japones: necesitas tu propia copia.
+
+Contacto: Discord https://discord.gg/NV8TbQQ7B

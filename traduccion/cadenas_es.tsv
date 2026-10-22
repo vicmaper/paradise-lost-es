@@ -1,0 +1,138 @@
+offset	tipo	spanish
+0x234	opcion	Saltar el prólogo
+0x24A	opcion	Ir al capítulo 2
+0x25A	opcion	Ir al intermedio
+0x278	opcion	Ir al capítulo 3
+0x288	opcion	Seguir desde aquí
+0x3F2	nombre	？？
+0x6F4	nombre	Gold
+0x6FC	nombre	Mujer
+0x8DC	nombre	Nacht
+0xA4C	nombre	Ryle
+0xAE8	nombre	Voz de mujer
+0xAF0	nombre	Voz de hombre
+0xAF8	nombre	Shambleau
+0xB22	nombre	Zul
+0x1556	nombre	Chica
+0x178E	nombre	Ennis
+0x1B20	opcion	A la derecha
+0x1B26	opcion	A la izquierda
+0x1B2C	opcion	¿Eres idiota?
+0x24BC	opcion	Esto es para una mujer
+0x24D2	opcion	Olvídalo, qué fastidio
+0x2696	nombre	Voz
+0x2AC0	nombre	Lil
+0x2EEC	opcion	Bueno, qué más da
+0x2EFA	opcion	Habrá que enseñarle
+0x3FFE	nombre	Carmine
+0x4900	opcion	Sí, sí, te queda bien
+0x4914	opcion	Cállate de una vez
+0x5236	opcion	No, nada
+0x5240	opcion	Sí. Muy raro
+0x5436	nombre	Hombre barbudo
+0x556E	nombre	Dezard
+0x55E8	nombre	Clemens
+0x56C2	nombre	Azuran
+0x659E	opcion	Me gustan grandes
+0x65AA	opcion	Medianos
+0x65BA	opcion	Pequeños, obvio
+0x65C8	opcion	Todos, la verdad
+0x7804	nombre	Payaso rojo
+0x780E	nombre	Payaso azul
+0x7818	nombre	Payasos rojo y azul
+0x7CF4	nombre	Judas
+0x7D24	nombre	Guitarrista
+0x87FA	nombre	Lilith
+0x927C	opcion	Su estructura
+0x9286	opcion	Su historia
+0x9290	opcion	Sus habitantes
+0x929A	opcion	Por qué está aislada
+0xA950	opcion	No es asunto tuyo
+0xA95E	opcion	No te aguanto
+0xB6AC	opcion	Nada
+0xB6BC	opcion	Lo recogeré
+0xC67C	nombre	Médico
+0xC682	nombre	Know
+0xC688	opcion	Sin anestesia, por favor
+0xC6A0	opcion	Con anestesia, por favor
+0xC81C	nombre	Sofia
+0xCBAA	nombre	Hombre
+0xCC0A	opcion	Antes iré a ver a Sofi
+0xCC26	opcion	Quisiera ver a Sofi…
+0xD196	nombre	Chico
+0xD41C	nombre	Doctora
+0xD956	nombre	Mujer
+0xEC7A	opcion	En realidad es mi novia
+0xEC8A	opcion	Es doctora y me salvó
+0xECA4	opcion	Decir la verdad
+0x1068E	opcion	Usar el elixir
+0x1069C	opcion	Rematar al médico
+0x108F4	opcion	Usar el elixir
+0x10906	opcion	No usarlo
+0x11DAC	opcion	Que me llame por mi nombre
+0x11DBC	opcion	«Hermano» está bien
+0x12DDC	opcion	Salir
+0x12DE6	opcion	Dejarlo morir
+0x14420	nombre	Ast
+0x14972	nombre	Satanail
+0x14A76	nombre	Lot
+0x1513A	nombre	Vera
+0x15DEA	nombre	Sigma
+0x16856	nombre	Zeno
+0x18898	opcion	Echar a Ast
+0x188AA	opcion	Al menos escucharla
+0x1906C	opcion	Contárselo
+0x19072	opcion	No contárselo
+0x19FD6	opcion	No resistirme en vano
+0x19FEA	opcion	Pedírselo a Satanail
+0x19FFC	opcion	¿No habrá otra salida?
+0x1AB3C	nombre	KC-02
+0x1B48E	opcion	Hacerle el amor a Vera
+0x1B49E	opcion	No hacerle el amor a Vera
+0x1E560	opcion	Mátame
+0x1E568	opcion	Te mataré
+0x1FE20	opcion	Beberlo
+0x1FE26	opcion	No beberlo
+0x2303E	nombre	Beelzebub
+0x234D0	opcion	No te mueras
+0x234DA	opcion	Vive
+0x234E4	opcion	Ve y mátalos
+0x23D82	opcion	No juegues conmigo
+0x23D8E	opcion	No me hagas reír
+0x23D9A	opcion	Te voy a matar
+0x278B4	nombre	Hombre rubio
+0x278D0	nombre	Mujer de lentes
+0x280D0	opcion	Quedarme tranquilo
+0x280E4	opcion	Ir de todas formas
+0x2819C	opcion	Mejor sí voy
+0x281AA	opcion	No, mejor no
+0x2A122	opcion	No digas tonterías
+0x2A130	opcion	Sí, así es
+0x2AF42	nombre	CHRIST
+0x2AF50	nombre	LILITH
+0x2B21C	opcion	Voy a ganar
+0x2B22A	opcion	No puedo asegurarlo, pero…
+0x2BD58	opcion	Matar a Ast
+0x2BD66	opcion	Antes que eso…
+0x2F6FE	opcion	Entendido
+0x2F708	opcion	No puedo hacerlo
+0x3074A	opcion	Salvar a Lilith
+0x3075A	opcion	No moverme de aquí
+0x31014	opcion	Abrazar a Ast
+0x31028	opcion	Negar con la cabeza
+0x329A2	opcion	Hacerme el fuerte
+0x329AA	opcion	Huir con Sofi
+0x334C8	opcion	Quedarme con Sofi
+0x334D8	opcion	Ir tras Ast
+0x348A6	nombre	Anciano
+0x348FC	nombre	Baraqiel
+0x349FE	nombre	Balt
+0x34AC6	nombre	John
+0x34F84	nombre	Matthew
+0x355D2	nombre	Chica de verde
+0x35644	nombre	Uriel
+0x3571C	nombre	Mujer de rojo
+0x35784	nombre	Michael
+0x35B6A	nombre	Raphael
+0x360E2	nombre	Mujer D
+0x36136	nombre	Chica A
