@@ -35,7 +35,7 @@ Para volver al japonés: botón **Quitar la traducción**.
 - Sin ventanas: `1_EXTRAER.bat`, `2_REVISAR_Y_CORREGIR.bat`, `3_GENERAR_DAT.bat`, `4_MENUS_EXE_ES.bat` (ver `LEEME.txt`).
 
 ## ¿Tienes otra edición del juego?
-Esta traducción y sus herramientas se hicieron para la **edición 2017** (malie.exe 1.1.0.0). La herramienta
+Esta traducción y sus herramientas se hicieron para la **edición 2017** Dies Irae & world box masada premium (malie.exe 1.1.0.0). La herramienta
 comprueba tu juego y, si es otra edición (otra versión, parches oficiales, versión descargable, reedición…),
 se detiene y te avisa en lugar de arriesgarse a dañar nada.
 
