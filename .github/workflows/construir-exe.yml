@@ -1,0 +1,58 @@
+# Arma PL_Traduccion.exe en una maquina Windows de GitHub y lo publica en "Releases".
+# Se ejecuta solo al crear una version (Releases -> Draft a new release), o a mano desde la pestaña Actions.
+name: Construir el .exe
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: python -m pip install pyinstaller==6.10.0 numpy==1.26.4 pefile
+
+      - name: Construir el .exe
+        run: >
+          pyinstaller --noconfirm --onefile --windowed --name PL_Traduccion
+          --paths herramientas
+          --add-data "herramientas/malie_claves_garbro.json;."
+          --hidden-import pl_kit --hidden-import pl_build --hidden-import pl_extraer
+          --hidden-import pl_exec_tool --hidden-import pl_cadenas --hidden-import malie_cipher
+          --hidden-import pl_exe_es --hidden-import menu_es
+          herramientas/pl_gui.py
+
+      - name: Armar el paquete para los fans
+        shell: pwsh
+        run: |
+          $d = "PL_Traduccion_Windows"
+          New-Item -ItemType Directory -Force $d, "$d/trabajo" | Out-Null
+          Copy-Item dist/PL_Traduccion.exe $d/
+          Copy-Item -Recurse traduccion, interfaz, docs $d/
+          Copy-Item README.md, LEEME.txt $d/
+          if (Test-Path LICENSE) { Copy-Item LICENSE $d/ }
+          if (Test-Path LICENCIA_TRADUCCION.txt) { Copy-Item LICENCIA_TRADUCCION.txt $d/ }
+          Compress-Archive -Path $d -DestinationPath "$d.zip" -Force
+
+      - name: Guardar como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: PL_Traduccion_Windows
+          path: PL_Traduccion_Windows.zip
+
+      - name: Adjuntar a la version publicada
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: PL_Traduccion_Windows.zip
