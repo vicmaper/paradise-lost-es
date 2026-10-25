@@ -9,7 +9,7 @@ from tkinter import ttk, filedialog, messagebox
 H = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, H)
 import pl_kit as K
 
-DISCORD = 'https://discord.gg/NV8TbQQ7B'
+DISCORD = 'https://discord.gg/k3Zfp85jMr'
 TITULO = 'Paradise Lost - Traducción al español'
 ESTADOS = ('draft', 'reviewed', 'approved')
 

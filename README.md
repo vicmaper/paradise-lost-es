@@ -4,7 +4,7 @@ Traducción al español latinoamericano de **Paradise Lost** (light, 2017, motor
 Masada-verse, hecha como proyecto de preservación. Este repositorio trae **las herramientas y la traducción**,
 **no el juego** ni su texto japonés: todo funciona con **tu propia copia** del juego.
 
-Contacto, dudas y reportes: **Discord → https://discord.gg/NV8TbQQ7B**
+Contacto, dudas y reportes: **Discord → https://discord.gg/k3Zfp85jMr**
 
 ## Qué hace
 1. Saca el guion de tu `data1.dat` (tu archivo no se modifica).
@@ -40,7 +40,7 @@ comprueba tu juego y, si es otra edición (otra versión, parches oficiales, ver
 se detiene y te avisa en lugar de arriesgarse a dañar nada.
 
 **Si tienes otra versión, te podemos ayudar a adaptar las herramientas.** Escríbenos en el
-**Discord: https://discord.gg/NV8TbQQ7B** y comparte:
+**Discord: https://discord.gg/k3Zfp85jMr** y comparte:
 - de dónde es tu copia (disco, descarga, tienda) y el año o versión que dice la caja o la tienda;
 - la versión de `malie.exe` (clic derecho → Propiedades → Detalles);
 - una captura del mensaje que mostró la herramienta (trae un código «md5» que nos sirve para identificarla).

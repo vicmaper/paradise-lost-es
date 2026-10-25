@@ -121,7 +121,7 @@ def cmd_extraer(args, aviso_final=True):
         raise SystemExit('ERROR: tu juego no es la edicion 2017 para la que se hizo esta traduccion\n'
                          '(codigo md5 de tu guion: %s). No se cambio nada.\n'
                          'Te podemos ayudar a adaptar la herramienta a tu version: escribe en el Discord\n'
-                         'https://discord.gg/NV8TbQQ7B con de donde es tu copia, la version de malie.exe\n'
+                         'https://discord.gg/k3Zfp85jMr con de donde es tu copia, la version de malie.exe\n'
                          '(clic derecho > Propiedades > Detalles) y una captura de este mensaje.\n'
                          'No apliques parches oficiales. Para intentarlo de todos modos: 1_EXTRAER con --forzar' % m)
     print('[3/4] Creando el CSV maestro ...')

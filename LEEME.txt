@@ -8,7 +8,7 @@ carga encima del original. Tu data1.dat nunca se modifica.
 Requisitos
 - Paradise Lost de light, edicion 2017 (malie.exe 1.1.0.0). Sin parches oficiales.
   ¿OTRA VERSION DEL JUEGO? La herramienta lo detecta y se detiene. Te podemos ayudar a
-  adaptarla: escribe en el Discord https://discord.gg/NV8TbQQ7B con de donde es tu copia,
+  adaptarla: escribe en el Discord https://discord.gg/k3Zfp85jMr con de donde es tu copia,
   la version de malie.exe (clic derecho > Propiedades > Detalles) y una captura del mensaje
   (trae un codigo md5). No compartas archivos del juego ni tu codigo de producto.
 - Python 3 (python.org; al instalar marca "Add Python to PATH").
@@ -34,7 +34,7 @@ QUE SE REVISA: marcas {v:}{/v} y {end} (iguales al japones), tamano (68 caracter
   renglones, maximo 900 por mensaje), japones sin traducir y estilo. Tabla completa en
   README.md, seccion "Que revisa la herramienta", y en el boton "¿Que se revisa?".
 
-Contacto y dudas: Discord https://discord.gg/NV8TbQQ7B
+Contacto y dudas: Discord https://discord.gg/k3Zfp85jMr
 
 FORMA RAPIDA (si ya tienes tu CSV traducido)
   Abre 3_GENERAR_DAT, arrastra tu CSV a la ventana y presiona Enter. La primera vez te
